@@ -73,7 +73,7 @@ def preprocesa_para_BERT(data):
     
 def preprocesa_para_LSTM(data, tokenizer, maxlen=40):
     # Para detectar urls y sustituirlas por URL
-    TEXT_URL = "https?:\S+|http?:\S|www\.\S+|\S+\.(com|org|co|us|uk|net|gov|edu)"
+    TEXT_URL = "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
     # Para detectar nombres de usuario y sustituirlos por USER
     TEXT_USER = "@\S+"
     # Para quitar signos de puntuación o caracteres extraños
